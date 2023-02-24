@@ -26,7 +26,7 @@ const TableBody = ({book}) => {
             </td>
             <td class="px-6 py-4 text-center">
                 <div class="flex justify-center gap-4">
-                    <button class="lws-remove" onClick={()=>dispatch(removeBook(book))}>
+                    <button class="lws-remove bg-blue-500 rounded-lg p-1 text-white" onClick={()=>dispatch(removeBook(book))}>
                         remove
                     </button>
                 </div>

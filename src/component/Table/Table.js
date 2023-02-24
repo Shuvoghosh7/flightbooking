@@ -6,7 +6,7 @@ const Table = () => {
     const booking=useSelector((state) =>state.book)
     console.log(booking)
     return (
-        <div class="table-container flex justify-center mt-12 ">
+        <div class="table-container flex justify-center lg:mt-36 mt-12 ">
         <table class="booking-table bg-white">
             <thead class="bg-gray-100/50">
                 <tr class="text-black text-left border-b-4 border-black">

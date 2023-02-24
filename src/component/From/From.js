@@ -20,13 +20,13 @@ const From = () => {
             guests,
             ticketClass
         }
-        
+
         dispatch(booking(data))
     }
     return (
-        <div class=" mx-4 relative top-5">
+        <div class=" mx-4 relative lg:top-28 top-5">
             <div class="bg-white rounded-md max-w-6xl w-full mx-auto ">
-                <form class="first-hero lws-inputform flex justify-between " onSubmit={submit} >
+                <form class="first-hero lws-inputform lg:flex justify-between p-3" onSubmit={submit} >
                     {/* <!-- From --> */}
                     <div class="des-from">
                         <p>Destination From</p>
@@ -91,12 +91,12 @@ const From = () => {
                         </div>
                     </div>
 
-                    <button class="addCity" type="submit" id="lws-addCity">
+                    {bookingss.length >=3 ? null : <button class="addCity" type="submit" id="lws-addCity">
                         <svg width="15px" height="15px" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                         </svg>
-                        <span class="text-sm">Book</span>
-                    </button>
+                        <span class="text-sm bg-green-500 p-1 rounded-lg text-white">Book</span>
+                    </button> }
                 </form>
             </div>
 
