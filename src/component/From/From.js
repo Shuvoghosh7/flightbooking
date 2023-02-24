@@ -1,21 +1,27 @@
 import React from 'react';
-
+import { useDispatch } from 'react-redux/es/exports';
+import { booking } from '../../redux/booking/actionCreator';
+import { useSelector } from 'react-redux';
 const From = () => {
-    const submit=(e)=>{
+    const dispatch = useDispatch();
+    const bookingss = useSelector((state) => state.book)
+    console.log(bookingss.length)
+    const submit = (e) => {
         e.preventDefault()
-        const from= e.target.from.value;
-        const to= e.target.to.value;
-        const date= e.target.date.value;
-        const guests= e.target.guests.value;
-        const ticketClass= e.target.ticketClass.value;
-        const data={
+        const from = e.target.from.value;
+        const to = e.target.to.value;
+        const date = e.target.date.value;
+        const guests = e.target.guests.value;
+        const ticketClass = e.target.ticketClass.value;
+        const data = {
             from,
             to,
             date,
             guests,
             ticketClass
         }
-        console.log(data)
+        
+        dispatch(booking(data))
     }
     return (
         <div class=" mx-4 relative top-5">
